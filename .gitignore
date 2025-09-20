@@ -10,4 +10,4 @@ wheels/
 .venv
 
 # conversions
-onnx-Qwen3-1.7B-Wordle-onnx/
+exports/*

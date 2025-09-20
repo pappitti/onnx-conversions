@@ -7,4 +7,6 @@
 
 just use the CLI tool
 
-`optimum-cli export onnx --model <model on HF> <name of new model>`
+`optimum-cli export onnx --model <model on HF> <exports/name of new model>`
+
+Note : not in the doc but you can use --dtype fp16 to avoid default export in fp32. --dtype bf16 is accepted however it is not actually handled by the export script
