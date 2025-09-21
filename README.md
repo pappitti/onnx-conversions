@@ -16,4 +16,5 @@ Note : not in the doc but you can use --dtype fp16 to avoid default export in fp
 define original (source) model in `quantize.py`
 create dataset for calibration, representative of the prompts seen by the model
 
-WARNING : still looking into it but you need a LOT of VRAM. like >150GB
+WARNING : still looking into it but static quantization requires a LOT of VRAM. like >150GB. Dynamic is more reasonable but still >30GB. Also quantization tools will produce weight files with .onnx.data extensions whereas transformers.js expects .onnx_data extensions. You can't just change the name because model.onnx references model.onnx.data. Use the `sanitize.py` script to change the location in the model.onnx file.  
+`python sanitize.py exports/<model_folder>/model_int8.onnx <updated_model_folder>/model_int8`
