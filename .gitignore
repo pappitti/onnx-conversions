@@ -11,3 +11,5 @@ wheels/
 
 # conversions
 exports/*
+*.onnx
+*.data

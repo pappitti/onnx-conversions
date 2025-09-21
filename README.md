@@ -12,7 +12,8 @@ just use the CLI tool
 
 Note : not in the doc but you can use --dtype fp16 to avoid default export in fp32. --dtype bf16 is accepted however it is not actually handled by the export script  
 
-
 # ONNX export and quantization
 define original (source) model in `quantize.py`
 create dataset for calibration, representative of the prompts seen by the model
+
+WARNING : still looking into it but you need a LOT of VRAM. like >150GB
