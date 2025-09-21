@@ -14,5 +14,8 @@ messages = [
             "role": "user"
         }
     ]
-response = onnx_pipeline(messages, max_new_tokens=256, do_sample=False, top_p=0.7, temperature=0.1, repetition_penalty=1.1, num_return_sequences=1)
+response = onnx_pipeline(messages, 
+        max_new_tokens=50, 
+        do_sample=False
+)
 print(response)
