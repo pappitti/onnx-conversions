@@ -90,7 +90,7 @@ print("Loading ORIGINAL model and initializing quantizer...")
 onnx_model = ORTModelForCausalLM.from_pretrained(
     fp16_model_dir, 
     export=True,
-    use_cache=False, # This removes the past_key_values inputs
+    use_cache=True, 
     use_io_binding=False)
 quantizer = ORTQuantizer.from_pretrained(onnx_model)
 
